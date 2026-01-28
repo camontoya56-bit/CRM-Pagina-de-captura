@@ -1,40 +1,73 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu Vida en una Canción | Carlos Alberto</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            scroll-behavior: smooth;
-        }
-        /* Previene saltos visuales antes de que cargue React */
-        #root:empty {
-            background-color: #1a0b2e;
-            min-height: 100vh;
-        }
-    </style>
-    <script type="importmap">
-    {
-      "imports": {
-        "react": "https://esm.sh/react@19.0.0",
-        "react/": "https://esm.sh/react@19.0.0/",
-        "react-dom": "https://esm.sh/react-dom@19.0.0",
-        "react-dom/": "https://esm.sh/react-dom@19.0.0/",
-        "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
-        "react-router-dom": "https://esm.sh/react-router-dom@7.2.0?external=react,react-dom"
-      }
-    }
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Escuela en una Canción</title>
+
+  <meta name="description" content="Juega con una sopa de letras educativa y accede a contenido exclusivo." />
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="bg-white text-gray-900">
-    <div id="root"></div>
-    <script type="module" src="index.tsx"></script>
+<body>
+
+<header class="hero">
+  <h1>Aprender también puede ser un juego</h1>
+  <p>
+    Déjanos tu correo y accede gratis a una <strong>sopa de letras educativa</strong>
+    diseñada para aprender jugando.
+  </p>
+
+  <div class="video-wrapper">
+    <iframe
+      src="https://www.youtube.com/embed/XLw4dxb2lts"
+      title="Video principal"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- FORMULARIO EMAIL -->
+  <form
+    action="https://formspree.io/f/mlgblerj"
+    method="POST"
+    class="form"
+  >
+    <input
+      type="email"
+      name="email"
+      placeholder="Tu correo electrónico"
+      required
+    />
+
+    <!-- Redirección a página de gracias -->
+    <input type="hidden" name="_next" value="/thanks.html">
+
+    <input type="hidden" name="_subject" value="Acceso a la sopa de letras – La Escuela en una Canción">
+    <input type="hidden" name="_template" value="table">
+
+    <button type="submit">
+      🎲 Juega con tu sopa de letras
+    </button>
+  </form>
+</header>
+
+<main class="content">
+  <h2>¿Qué recibirás?</h2>
+
+  <div class="links">
+    <a
+      href="https://claude.ai/public/artifacts/681e2558-717b-459b-9c94-074db8641a95"
+      target="_blank"
+      rel="noopener">
+      🧩 Acceso a la sopa de letras educativa
+    </a>
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 · La Escuela en una Canción</p>
+</footer>
+
 </body>
 </html>
